@@ -1,0 +1,6 @@
+Pins
+top: 	23	topPin		Yellow
+middle: 24	middlePin	White
+bottom: 25	bottomPin	Orange
+
+Motor: 	22	servoPin	Brown
