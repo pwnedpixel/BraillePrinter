@@ -19,12 +19,14 @@ servoInnerCharTime = 0.05
 servoInterCharTime = 0.075
 prevNum = False
 
+#inserts character/numerical symbols in correct location by grouping series 
+#either non-numerical or numerical characters, then prints the string
 def main(inputString):
     newString=""
     
     for i in range (0,(len(inputString) - 1)):
         print(inputString[i])
-
+        #checks first character
         if i == 0:
             if 48 <= ord(inputString[i]) <=57:
                 newString += "+"
@@ -34,7 +36,7 @@ def main(inputString):
         newString += inputString[i]
 
         print(ord(inputString[i]))
-            
+        # if first numeric, insert a -, else if first character +    
         if 48 <= ord(inputString[i]) <=57:
             if ord(inputString[i+1]) > 57:
                 newString += "-"
